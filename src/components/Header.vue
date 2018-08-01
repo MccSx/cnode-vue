@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style scoped>
-.header{height: 50px; background: #444444; display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 13%;}
+.header{height: 50px; background: #444444; display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 8%;}
 .header img{height: 55%;}
 .header ul>li{display: inline-block; padding: 0 10px; font-size: 14px;}
 </style>

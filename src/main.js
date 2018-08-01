@@ -16,3 +16,21 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+Vue.filter('timeFilter', function (value) {
+  if (!value) {
+    return ''
+  }
+  let time = new Date().getTime() - new Date(value).getTime()
+  if (time < 0) {
+    return ''
+  } else if (time/1000 < 60) {
+    return '刚刚'
+  } else if (time/(1000*60) < 60) {
+    return `${Math.floor(time/(1000*60))} 分钟前`
+  } else if (time/(1000*60*60) < 24) {
+    return `${Math.floor(time/(1000*60*60))} 小时前`
+  } else {
+    return `${Math.floor(time/(1000*60*60*24))} 天前`
+  }
+})

@@ -12,7 +12,7 @@
           </span>
           <div class="message">
             <p>{{post.title}}</p>
-            <span>{{post.last_reply_at}}</span>
+            <span>{{post.last_reply_at | timeFilter}}</span>
           </div>
         </li>
       </ul>
@@ -51,11 +51,12 @@ export default {
 </script>
 
 <style scoped>
-.posts{width: 75%; margin: 0 auto; background: #FFFFFF;}
+.posts{width: 84%; margin: 0 auto; background: #FFFFFF;}
 .post-list ul li{height: 50px; border-bottom: 1px solid #F0F0F0; display: flex; flex-direction: row; align-items: center;}
 .post-list ul li img{height: 65%; border-radius: 3px; margin-left: 1%;}
-.post-list ul li .count{display: flex; justify-content: center; align-items: center; width: 5%;}
+.post-list ul li .count{display: flex; justify-content: center; align-items: center; width: 8%;}
 .post-list ul li .reply-count{font-size: 14px;}
 .post-list ul li .visit-count{font-size: 12px; color: #B8B8B8;}
 .post-list ul li .message{width: 100%; display: flex; flex-direction: row; justify-content: space-between;}
+.post-list ul li .message>span{font-size: 14px; color: #B8B8B8;}
 </style>
