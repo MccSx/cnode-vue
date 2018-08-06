@@ -11,7 +11,9 @@
             <span class="reply-count">{{post.reply_count}}</span>/<span class="visit-count">{{post.visit_count}}</span>
           </span>
           <div class="message">
-            <p>{{post.title}}</p>
+            <router-link :to="{name: 'article', params: {userId: post.id}}">
+              <p>{{post.title}}</p>
+            </router-link>
             <span>{{post.last_reply_at | timeFilter}}</span>
           </div>
         </li>
@@ -58,5 +60,7 @@ export default {
 .post-list ul li .reply-count{font-size: 14px;}
 .post-list ul li .visit-count{font-size: 12px; color: #B8B8B8;}
 .post-list ul li .message{width: 100%; display: flex; flex-direction: row; justify-content: space-between;}
-.post-list ul li .message>span{font-size: 14px; color: #B8B8B8;}
+.post-list ul li .message p{color: black;}
+.post-list ul li .message p:hover{text-decoration: underline;}
+.post-list ul li .message>span{font-size: 14px; color: #B8B8B8; margin-right: 10px;}
 </style>
