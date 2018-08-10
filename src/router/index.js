@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import PostList from '../components/PostList'
-import Article from '../components/Article'
+import articleConponent from '../components/articleConponent'
 
 Vue.use(Router)
 
@@ -14,7 +14,7 @@ export default new Router({
     {
       path: '/article/:userId',
       name: 'article',
-      component: Article
+      component: articleConponent
     }
   ]
 })
